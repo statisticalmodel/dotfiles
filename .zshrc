@@ -49,7 +49,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git scala vagrant sbt mvn go docker brew brew-cask)
+plugins=(git aws scala vagrant wercker sbt mvn go docker docker-machine brew brew-cask autojump)
 
 # User configuration
 
@@ -90,3 +90,15 @@ setjdk18
 # http://superuser.com/questions/417627/oh-my-zsh-history-completion
 bindkey '\e[A' history-beginning-search-backward
 bindkey '\e[B' history-beginning-search-forward
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+alias dm=docker-machine
+export GRADLE_HOME=/usr/local/opt/gradle/libexec
+export ARTIFACTORY_HOME=/var/opt/jfrog/artifactory
+
+alias dmd='eval "$(docker-machine env default)"'
+alias influx='influxd -config /usr/local/etc/influxdb.conf'
+
+# Added by Dato Launcher v2.0.1
+export PATH="/Users/olu/anaconda/bin:$PATH"
