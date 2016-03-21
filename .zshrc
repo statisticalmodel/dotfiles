@@ -97,8 +97,9 @@ alias dm=docker-machine
 export GRADLE_HOME=/usr/local/opt/gradle/libexec
 export ARTIFACTORY_HOME=/var/opt/jfrog/artifactory
 
-alias dmd='eval "$(docker-machine env default)"'
+alias dmd='eval "$(docker-machine env default)";echo $DOCKER_HOST'
 alias influx='influxd -config /usr/local/etc/influxdb.conf'
 
 # Added by Dato Launcher v2.0.1
 export PATH="/Users/olu/anaconda/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
